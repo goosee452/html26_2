@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+
+html{
+    height: 100%;
+    width: 100%;
+    margin: 0;
+}
+
+body{
+    display: flex;
+    color: white;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    font-size: larger;
+    font-family: monospace;
+}
+
+.navigation{
+    width: 20%;
+    background-image: linear-gradient(rgb(75, 158, 75), rgb(9, 120, 128));
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.main{
+    background-color: rgb(43, 43, 43);
+    width: 80%;
+    height: 100%;
+    font-size: 150%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+a{
+    color: white;
+}
+
+span{
+    color: rgb(219, 134, 85);
+    font-weight: bold;
+    font-size: larger;
+}
+
+p{
+    margin: 5px;
+}
+
+.switch-theme{
+    border: 0;
+    border-color: white;
+    background-color: rgba(255, 255, 255, 0.2);
+    border: 5px;
+    color: white;
+    box-shadow: none;
+}
+</style>
+
+<body>
+
+    <div class="navigation">
+        <h1>Navigation: </h1>
+        <a href="cv.html">My CV</a>
+        <a href="question.html">Ask me a question</a>
+        <button type="button" onclick="switchTheme()" class="switch-theme">Switch Theme</button>
+
+        <script>
+            let state = 'dark';
+
+            function switchTheme(){
+                switch(state){
+                    case 'dark':{
+                        document.getElementById('main1').style.backgroundColor = 'white';
+                        document.getElementById('main1').style.color = 'black';
+                        state = 'light';
+                        break;
+                    }
+                    case 'light':{
+                        document.getElementById('main1').style.backgroundColor = 'rgb(43, 43, 43)';
+                        document.getElementById('main1').style.color = 'white';
+                        state = 'dark';
+                        break;
+                    }
+                }
+            }
+        </script>
+    </div>
+
+    <div class="main" id="main1">
+        <img src="photo.png" alt="" style="height: 300px; width: 225px; margin-bottom: 50px;">
+
+        <p><span>Name</span>: Sluchanko Vladisalv Viktorovich </p>
+        <p><span>Age</span>: 15(born April 9, 2007)</p>
+        <p><span>Country</span>: Belarus</p>
+        <p><span>Hobbies</span>: games, drawing, music, programming</p>
+        <p><span>Achievments</span>: born, haven't died yet</p>
+        <p><span>Contacts</span>: </p>
+        <p>Tel: +375 29 634-37-25(a1)</p>
+        <p>Email: sluchankovlad@gmail.com</p>
+        <p>Discord: </p>
+    </div>
+
+</body>
+</html>
